@@ -52,9 +52,4 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_c
 #import connector
 import snowflake.connector
 
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_cur_rows = my_cnx.fetchall()
-my_cur.execute("select * from fruit_load_list")
-my_data_row = my_cur.fetchone()
-streamlit.header("The fruit load list contains:")
-streamlit.dataframe(my_data_rows)
+
