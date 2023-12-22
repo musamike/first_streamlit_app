@@ -30,7 +30,5 @@ import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
 
-snowflake-connector-python==3.6.0
-
 #import connector
 import snowflake.connector
