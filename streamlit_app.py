@@ -49,6 +49,17 @@ streamlit.write('The user entered ', fruit_choice)
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
+import streamlit
+
+# Assuming my_fruit_list is a pandas DataFrame
+my_fruit_list = pd.DataFrame({'Fruit': ['Apple', 'Banana', 'Orange']})
+
+# Get the list of fruit names
+fruit_names = my_fruit_list['Fruit'].tolist()
+
+# Use streamlit.multiselect with unique ID
+fruits_selected = streamlit.multiselect("Pick some fruits:", fruit_names, ['Avocado', 'Strawberries'])
+
 #import connector
 import snowflake.connector
 
