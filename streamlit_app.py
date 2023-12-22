@@ -35,7 +35,8 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normalized)
 
 #Download python
-streamlit==1.25.0
+pip install snowflake-connector-python
+pip install pycryptodome
 
 #import connector
 import snowflake.connector
