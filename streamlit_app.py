@@ -49,9 +49,6 @@ streamlit.write('The user entered ', fruit_choice)
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
-import streamlit as st
-from streamlit_metrics import metric, metric_row
-
 #import connector
 import snowflake.connector
 
