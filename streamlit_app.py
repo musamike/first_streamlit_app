@@ -35,7 +35,7 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normalized)
 
 # Let's put a pick list here so they can pick the fruit they want to include 
-fruits_selected=streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
+fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # Display the table on the page.
@@ -48,17 +48,6 @@ streamlit.write('The user entered ', fruit_choice)
 
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-
-import streamlit
-
-# Assuming my_fruit_list is a pandas DataFrame
-my_fruit_list = pd.DataFrame({'Fruit': ['Apple', 'Banana', 'Orange']})
-
-# Get the list of fruit names
-fruit_names = my_fruit_list['Fruit'].tolist()
-
-# Use streamlit.multiselect with unique ID
-fruits_selected = streamlit.multiselect("Pick some fruits:", fruit_names, ['Avocado', 'Strawberries'])
 
 #import connector
 import snowflake.connector
