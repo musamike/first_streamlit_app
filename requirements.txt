@@ -1,3 +1,7 @@
-#requirements.txt
-snowflake-connector-python 3.12.1
-
+requirements.txt
+pandas
+plotly
+streamlit
+yfinance
+pandas-datareader
+prophet
