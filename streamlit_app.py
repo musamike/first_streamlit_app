@@ -36,11 +36,7 @@ streamlit.dataframe(fruityvice_normalized)
 
 #Download python
 snowflake-connector-python
-
-cffi==1.15.0
-
 pyarrow<8.1.0,>=8.0.0
-
 streamlit >= 1.9.2
 
 #import connector
